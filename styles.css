@@ -336,3 +336,12 @@ p {
   .panel { display: block; }
   .card, .post { box-shadow: none; background: white; }
 }
+
+.home-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  margin: 14px 0 10px;
+  border: 3px solid var(--accent);
+}
