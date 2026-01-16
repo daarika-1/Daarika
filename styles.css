@@ -370,7 +370,3 @@ p {
     width: min(360px, 100%);
   }
 }
-
-.highlight {
-  font-weight: bold;
-}
