@@ -23,6 +23,32 @@
     btn.addEventListener('click', () => setActive(btn.dataset.target));
   });
 
+  const blogTabs = Array.from(document.querySelectorAll('.blog-tab'));
+  const blogPosts = Array.from(document.querySelectorAll('#blog .post'));
+
+  function setActivePost(postId) {
+    blogTabs.forEach(tab => {
+      const isActive = tab.dataset.post === postId;
+      tab.classList.toggle('is-active', isActive);
+      tab.setAttribute('aria-selected', String(isActive));
+    });
+
+    blogPosts.forEach(post => {
+      const isActive = post.id === postId;
+      post.classList.toggle('is-active', isActive);
+      post.toggleAttribute('hidden', !isActive);
+    });
+  }
+
+  blogTabs.forEach(tab => {
+    tab.addEventListener('click', () => setActivePost(tab.dataset.post));
+  });
+
+  if (blogTabs.length && blogPosts.length) {
+    const activeTab = blogTabs.find(tab => tab.classList.contains('is-active')) || blogTabs[0];
+    if (activeTab) setActivePost(activeTab.dataset.post);
+  }
+
   // Restore state from URL hash.
   const initial = (location.hash || '').replace('#', '').trim();
   if (initial && document.getElementById(initial)) {

@@ -286,10 +286,43 @@ p {
   box-shadow: var(--shadow);
 }
 
+.post[hidden] {
+  display: none;
+}
+
 .post-meta {
   margin: -4px 0 10px;
   font-size: 12px;
   color: var(--ink-2);
+}
+
+.blog-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.blog-tab {
+  border: 1px solid rgba(129, 146, 171, 0.85);
+  background: rgba(255, 255, 255, 0.65);
+  color: var(--ink);
+  padding: 10px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: transform 120ms ease, border-color 120ms ease, background 120ms ease;
+}
+
+.blog-tab:hover {
+  transform: translateY(-1px);
+  border-color: rgba(129, 146, 171, 1);
+}
+
+.blog-tab.is-active {
+  background: rgba(129, 146, 171, 0.22);
+  border-color: rgba(129, 146, 171, 1);
+  box-shadow: 0 10px 22px rgba(11, 26, 36, 0.12);
 }
 
 .tip code {
