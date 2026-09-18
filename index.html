@@ -9,6 +9,7 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="ambient" aria-hidden="true"><span class="orb orb-a"></span><span class="orb orb-b"></span></div>
 
   <aside class="sidebar" aria-label="Site navigation">
     <div class="brand">
@@ -17,10 +18,27 @@
     </div>
 
     <nav class="nav" aria-label="Sections">
-      <button class="nav-link is-active" data-target="home" type="button">Home</button>
-      <button class="nav-link" data-target="cv" type="button">CV</button>
-      <button class="nav-link" data-target="achievements" type="button">Achievements &amp; Activities</button>
-      <button class="nav-link" data-target="blog" type="button">Blog</button>
+      <span class="nav-glider" aria-hidden="true"></span>
+      <button class="nav-link is-active" data-target="home" type="button">
+        <span class="nav-idx" aria-hidden="true">01</span>
+        <span class="nav-label">Home</span>
+        <span class="nav-arrow" aria-hidden="true">→</span>
+      </button>
+      <button class="nav-link" data-target="cv" type="button">
+        <span class="nav-idx" aria-hidden="true">02</span>
+        <span class="nav-label">CV</span>
+        <span class="nav-arrow" aria-hidden="true">→</span>
+      </button>
+      <button class="nav-link" data-target="achievements" type="button">
+        <span class="nav-idx" aria-hidden="true">03</span>
+        <span class="nav-label">Achievements &amp; Activities</span>
+        <span class="nav-arrow" aria-hidden="true">→</span>
+      </button>
+      <button class="nav-link" data-target="blog" type="button">
+        <span class="nav-idx" aria-hidden="true">04</span>
+        <span class="nav-label">Blog</span>
+        <span class="nav-arrow" aria-hidden="true">→</span>
+      </button>
     </nav>
 
     <div class="sidebar-footer">
@@ -213,11 +231,12 @@
       <p class="lede">A simple space for notes, reflections, and writing samples.</p>
 
       <div class="blog-tabs" role="tablist" aria-label="Blog posts">
+        <span class="tab-glider" aria-hidden="true"></span>
         <button class="blog-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="post-1" id="tab-post-1" data-post="post-1">
-          Hey!
+          <span class="tab-dot" aria-hidden="true"></span>Hey!
         </button>
         <button class="blog-tab" type="button" role="tab" aria-selected="false" aria-controls="post-2" id="tab-post-2" data-post="post-2">
-          Birthday Blues?  
+          <span class="tab-dot" aria-hidden="true"></span>Birthday Blues?
         </button>
       </div>
 
